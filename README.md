@@ -129,24 +129,19 @@ Per-class metrics:
 ```
 emotion-classification/
 ├── README.md
-├── data/
+├── dataset/
 │   └── Emotion_classify_Data.csv
 ├── notebooks/
 │   └── emotion_classification.ipynb
-├── src/
-│   ├── data_preprocessing.py
-│   ├── models.py
-│   └── utils.py
-├── results/
-│   ├── plots/
-│   │   ├── emotion_distribution.png
-│   │   ├── cnn_model_accuracy_plot.png
-│   │   ├── ann_model_loss_plot.png
-│   │   └── rnn_model_accuracy_plot.png
-│   └── models/
-│       ├── cnn_model.h5
-│       ├── ann_model.h5
-│       └── rnn_model.h5
+├── images/
+│   ├
+│   │── emotion_distribution.png
+│   │── cnn_model_accuracy_plot.png
+│   │── ann_model_loss_plot.png
+│   │── rnn_model_accuracy_plot.png
+│   ├── cnn_model.h5
+│   ├── ann_model.h5
+│   └── rnn_model.h5
 └── requirements.txt
 ```
 
@@ -183,7 +178,7 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
 import pandas as pd
 from src.data_preprocessing import preprocess_text
 
-df = pd.read_csv('data/Emotion_classify_Data.csv')
+df = pd.read_csv('dataset/Emotion_classify_Data.csv')
 df['processed_comment'] = df['Comment'].apply(preprocess_text)
 
 # Train CNN model
@@ -243,17 +238,6 @@ print(f"Predicted Emotion: {emotion}")
 - **Visualization:** Created comprehensive training curves and performance plots
 - **Best Practices:** Applied modern deep learning conventions (padding, embedding, dropout considerations)
 
-## 🚧 Future Improvements
-
-- [ ] Add dropout layers to reduce overfitting on longer training
-- [ ] Implement attention mechanisms for interpretability
-- [ ] Experiment with pre-trained embeddings (GloVe, FastText)
-- [ ] Deploy as REST API using Flask/FastAPI
-- [ ] Add cross-validation for more robust evaluation
-- [ ] Implement class weighting for imbalanced datasets
-- [ ] Create web interface for real-time predictions
-- [ ] Fine-tune with pre-trained models (BERT, RoBERTa)
-
 ## 📝 Hyperparameter Details
 
 ```
@@ -286,15 +270,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see LICENSE file for details.
 
-## 👨‍💻 Author
 
-Your Name - [GitHub](https://github.com/yourusername)
 
-## 📞 Contact & Support
-
-- **Issues:** Open an issue on GitHub for bug reports
-- **Discussions:** Use GitHub Discussions for questions and ideas
-- **Email:** your.email@example.com
 
 ## 📚 References
 
@@ -306,5 +283,5 @@ Your Name - [GitHub](https://github.com/yourusername)
 
 ---
 
-**Last Updated:** March 4, 2026  
-**Status:** ✅ Project Complete & Documented
+**Last Updated:** March 15, 2026  
+
